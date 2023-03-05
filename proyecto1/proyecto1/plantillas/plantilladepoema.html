@@ -1,0 +1,31 @@
+<html> 
+    <body>
+        {% include "superior/barra.html" %}
+
+        <h1>
+            Cuando las arañas tejen juntas, pueden atar a un león. 
+        </h1>
+        <p> <h2>{{nombre_persona}}</h2></p>
+
+        <h1>
+            Solos podemos hacer poco, juntos podemos hacer mucho.
+        </h1>
+        <p><h2>{{nombre_persona2}}</h2></p>
+        <p>Temas del curso</p>
+        <p>
+            <lu>
+                {% if Tema %}
+                    {% for Eltema in Tema %}
+                    <li>
+                        {{Eltema.upper}}
+                    </li>                
+                    {% endfor %}
+                {% else %}
+                    <p> No hay datos por Mostrar</p>
+                {% endif %}
+                
+                
+            </lu>
+        </p>
+    </body>
+</html>
